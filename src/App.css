@@ -1,0 +1,25 @@
+.container{
+    width: 400px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    
+}
+
+h2{
+    text-align: center;
+    
+}
+
+.btn {
+    width: 150px;
+    background-color: rgb(70, 225, 101);
+    border: none;
+    border-radius: 15px;
+    padding: 5px ;
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+}
