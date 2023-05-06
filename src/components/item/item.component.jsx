@@ -11,7 +11,7 @@ export const Item = ({item, deleteItem }) => {
 
   return (
     <li className="first-li d-flex p-2 justify-content-between mt-5 ms-5 align-items-center border border-bottom-1 border-success-subtle">
-      <input ref={checkboxRef} type="checkbox" onChange={handleCheckboxChange} />
+      <input ref={checkboxRef} type="checkbox" />
       <span>{item.text}</span>
       <div>
         <button className="btn btn-success">Edit</button>
