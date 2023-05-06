@@ -9,7 +9,7 @@ export function App() {
   return (
     <div className="container">
       <Form setAllUseTodo={setAllUseTodo} />
-        <List allUseTodo={allUseTodo}/>
+        <List allUseTodo={allUseTodo} setAllUseTodo={setAllUseTodo}/>
     </div>
   );
 }

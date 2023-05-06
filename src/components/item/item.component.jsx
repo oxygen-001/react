@@ -1,12 +1,20 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "./item.css";
 
-export const Item = ({item, deleteItem }) => {
+export const Item = ({ item, allUseTodo, setAllUseTodo }) => {
   const checkboxRef = useRef();
+  const [deletlist, setDeletelist] = useState([...allUseTodo]);
+  const handleDeleteClick = (id) => {
+    allUseTodo = allUseTodo.filter((item) => item.id !== id);
+    setAllUseTodo([...allUseTodo]);
+  };
 
-
-  const handleDeleteClick = () => {
-    deleteItem(item.id);
+  const edit = (id) => {
+    let editText = prompt("Enter edit text", `${item.text}`);
+    console.log(editText);
+    const newobj = allUseTodo.find((index) => (index.id == id));
+    newobj.text = editText;
+    setAllUseTodo([...allUseTodo]);
   };
 
   return (
@@ -14,8 +22,13 @@ export const Item = ({item, deleteItem }) => {
       <input ref={checkboxRef} type="checkbox" />
       <span>{item.text}</span>
       <div>
-        <button className="btn btn-success">Edit</button>
-        <button onClick={handleDeleteClick} className="btn btn-danger ms-2">
+        <button onClick={() => edit(`${item.id}`)} className="btn btn-success">
+          Edit
+        </button>
+        <button
+          onClick={() => handleDeleteClick(`${item.id}`)}
+          className="btn btn-danger ms-2"
+        >
           Delete
         </button>
       </div>
