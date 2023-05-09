@@ -1,15 +1,19 @@
 import { useRef, useState } from "react";
-import { Form } from "./components/form";
-import { List } from "./components/list";
+import { Header } from "./components/header";
+import { Search } from "./components/search";
+import { Countries } from "./components/countries";
+
 // import "./App.css";
 
 export function App() {
-  const [allUseTodo, setAllUseTodo] = useState([]);
-  console.log(allUseTodo);
+
+
+  const [allData, setAllData] = useState([]);
   return (
-    <div className="container">
-      <Form setAllUseTodo={setAllUseTodo} />
-        <List allUseTodo={allUseTodo} setAllUseTodo={setAllUseTodo}/>
-    </div>
+    <>
+      <Header />
+      <Search allData={allData} setAllData={setAllData}/>
+      <Countries allData={allData} setAllData={setAllData}/>
+    </>
   );
 }

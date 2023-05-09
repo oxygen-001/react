@@ -1,0 +1,36 @@
+.container {
+  width: 1400px;
+  padding-top: 40px;
+  margin: 0 auto;
+}
+
+.header_a {
+  color: black;
+  font-size: x-large;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header_p {
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: black;
+  /* padding: 5px; */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 0.5px black;
+}
+
+.header_main_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_div {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+  padding-bottom: 20px;
+}
